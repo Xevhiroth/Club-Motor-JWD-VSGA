@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Kami - Hooligan Bike Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Tambahkan gaya CSS khusus di sini jika perlu */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="image/logo.png" alt="Hooligan Logo" class="logo">
+            </a>
+        </div>
+        <h1 class="company-name">HOOLIGAN BIKE CLUB</h1>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="visi_misi.html">Visi dan Misi</a></li>
+                <li><a href="produk.html" class="active">Produk Kami</a></li>
+                <li><a href="kontak.html">Kontak Kami</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="side-nav" id="sideNav">
+        <ul>
+            <li><a href="index.html#artikel">Artikel</a></li>
+            <li><a href="index.html#event">Event</a></li>
+            <li><a href="index.html#gallery">Gallery Foto</a></li>
+            <li><a href="index.html#klien">Klien Kami</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section id="produk" class="produk-section">
+            <h2>Produk Kami</h2>
+            <div class="produk-container">
+                <div class="produk-card">
+                    <img src="image/produk1.jpg" alt="Produk 1" class="produk-image">
+                    <div class="produk-info">
+                        <h3>Motor Sport X200</h3>
+                        <p>Motor sport terbaru dengan performa tinggi dan desain modern. Ideal untuk kecepatan dan kenyamanan berkendara.</p>
+                        <span class="produk-price">Rp 15.000.000</span>
+                    </div>
+                </div>
+                <div class="produk-card">
+                    <img src="image/produk2.jpg" alt="Produk 2" class="produk-image">
+                    <div class="produk-info">
+                        <h3>Helm Racing Pro</h3>
+                        <p>Helm balap dengan teknologi terkini dan desain aerodinamis. Memberikan perlindungan maksimal dan kenyamanan.</p>
+                        <span class="produk-price">Rp 2.500.000</span>
+                    </div>
+                </div>
+                <div class="produk-card">
+                    <img src="image/produk3.jpg" alt="Produk 3" class="produk-image">
+                    <div class="produk-info">
+                        <h3>Jaket Kulit Premium</h3>
+                        <p>Jaket kulit premium untuk pengendara yang mengutamakan gaya dan kenyamanan. Terbuat dari bahan berkualitas tinggi.</p>
+                        <span class="produk-price">Rp 1.200.000</span>
+                    </div>
+                </div>
+                <!-- Produk tambahan -->
+                <div class="produk-card">
+                    <img src="image/produk4.jpg" alt="Produk 4" class="produk-image">
+                    <div class="produk-info">
+                        <h3>Sepatu Motor Adventure</h3>
+                        <p>Sepatu motor adventure yang tahan air dan nyaman dipakai. Ideal untuk perjalanan jauh dan berbagai kondisi cuaca.</p>
+                        <span class="produk-price">Rp 900.000</span>
+                    </div>
+                </div>
+                <div class="produk-card">
+                    <img src="image/produk5.jpg" alt="Produk 5" class="produk-image">
+                    <div class="produk-info">
+                        <h3>Gelang Anti Guncangan</h3>
+                        <p>Gelang anti guncangan yang memberikan dukungan ekstra pada pergelangan tangan saat berkendara. Cocok untuk pengendara profesional.</p>
+                        <span class="produk-price">Rp 150.000</span>
+                    </div>
+                </div>
+                <div class="produk-card">
+                    <img src="image/produk6.jpg" alt="Produk 6" class="produk-image">
+                    <div class="produk-info">
+                        <h3>Cover Motor Premium</h3>
+                        <p>Cover motor premium untuk melindungi motor dari cuaca buruk. Terbuat dari bahan tahan lama dan tahan air.</p>
+                        <span class="produk-price">Rp 350.000</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2024 Hooligan Bike Club. Semua hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Ambil semua link dalam sidebar
+        var navLinks = document.querySelectorAll('#sideNav ul li a');
+    
+        // Tambahkan event listener untuk setiap link
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                // Hapus kelas 'active' dari semua link
+                navLinks.forEach(function(link) {
+                    link.classList.remove('active');
+                });
+    
+                // Tambahkan kelas 'active' ke link yang diklik
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

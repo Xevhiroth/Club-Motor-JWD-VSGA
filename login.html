@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-container img {
+            width: 150px; /* Ukuran logo klub */
+            height: auto;
+        }
+
+        .login-container h2 {
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .login-container p {
+            margin-bottom: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .login-container input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .login-container .forgot-password {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .login-container .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .login-container .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <a href="index.html">
+            <img src="image/logo.png" alt="Logo Klub"> 
+        </a>
+        <h2>Login ke Hooligan Bike Club</h2> 
+        <p>Silakan masukkan detail login Anda untuk melanjutkan.</p>
+        <form action="#" method="POST">
+            <input type="text" name="username" placeholder="Nama Pengguna" required>
+            <input type="password" name="password" placeholder="Kata Sandi" required>
+            <input type="submit" value="Login">
+        </form>
+        <div class="forgot-password">
+            <p><a href="#">Lupa kata sandi?</a></p>
+        </div>
+    </div>
+</body>
+</html>

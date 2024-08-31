@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Hooligan Bike Club</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link ke file CSS eksternal -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Logo perusahaan -->
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="image/logo.png" alt="Hooligan Logo" class="logo">
+            </a>
+        </div>
+
+        <!-- Nama perusahaan -->
+        <h1 class="company-name">HOOLIGAN BIKE CLUB</h1>
+
+        <!-- Navigasi atas -->
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="visi_misi.html">Visi dan Misi</a></li>
+                <li><a href="produk.html">Produk Kami</a></li>
+                <li><a href="kontak.html">Kontak Kami</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar navigasi -->
+    <aside class="side-nav" id="sideNav">
+        <ul>
+            <li><a href="index.html#artikel">Artikel</a></li>
+            <li><a href="index.html#event">Event</a></li>
+            <li><a href="index.html#gallery">Gallery Foto</a></li>
+            <li><a href="index.html#klien">Klien Kami</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </aside>
+    <!-- Konten utama -->
+    <main>
+        <!-- Section Home -->
+        <section id="home" class="home-section">
+            <h2>Welcome to Hooligan Bike Club</h2>
+            <!-- Foto untuk section Home -->
+            <img src="image/Group Photo.jpg" alt="Hooligan Bike Club" class="home-image">
+            <p>Discover the world of motorcycles with us. Join our club and be part of the adventure!</p>
+        </section>
+
+        <!-- Section Artikel -->
+        <section id="artikel" class="artikel-section">
+            <h2>Artikel Terbaru</h2>
+            <div class="artikel-container">
+                <!-- Kartu artikel pertama -->
+                <div class="artikel-card">
+                    <img src="image/artikel_1.jpg" alt="Artikel 1">
+                    <div class="artikel-info">
+                        <h3>Mengapa Servis Rutin Penting untuk Motor Anda</h3>
+                        <p>Menjaga motor tetap dalam kondisi prima adalah kunci untuk perjalanan yang aman dan nyaman...
+                        </p>
+                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </div>
+                <!-- Kartu artikel kedua -->
+                <div class="artikel-card">
+                    <img src="image/artikel_2.jpg" alt="Artikel 2">
+                    <div class="artikel-info">
+                        <h3>Tips Memilih Helm yang Tepat</h3>
+                        <p>Helm bukan hanya pelindung kepala, tapi juga bagian penting dari gaya berkendara Anda...</p>
+                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </div>
+                <!-- Kartu artikel ketiga -->
+                <div class="artikel-card">
+                    <img src="image/artikel_3.jpg" alt="Artikel 3">
+                    <div class="artikel-info">
+                        <h3>Panduan Memilih Oli Mesin yang Tepat</h3>
+                        <p>Oli mesin memiliki peran penting dalam menjaga performa motor Anda. Ketahui bagaimana memilih
+                            yang terbaik...</p>
+                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Event -->
+        <section id="event" class="event-section">
+            <h2>Event Kami</h2>
+            <div class="event-container">
+                <!-- Kartu event pertama -->
+                <div class="event-card">
+                    <img src="image/event_1.jpg" alt="Event 1">
+                    <div class="event-info">
+                        <h3>Touring Akhir Pekan</h3>
+                        <p>Bergabunglah dengan kami untuk touring akhir pekan ke Puncak. Ayo nikmati perjalanan bersama
+                            komunitas!</p>
+                        <span class="event-date">5 September 2024</span>
+                    </div>
+                </div>
+                <!-- Kartu event kedua -->
+                <div class="event-card">
+                    <img src="image/event_2.jpg" alt="Event 2">
+                    <div class="event-info">
+                        <h3>Workshop Mekanik</h3>
+                        <p>Ikuti workshop mekanik motor bersama ahli kami. Tingkatkan keterampilan Anda dalam perawatan
+                            motor!</p>
+                        <span class="event-date">12 September 2024</span>
+                    </div>
+                </div>
+                <!-- Kartu event ketiga -->
+                <div class="event-card">
+                    <img src="image/event_3.jpg" alt="Event 3">
+                    <div class="event-info">
+                        <h3>Lomba Modifikasi Motor</h3>
+                        <p>Tunjukkan kreativitas Anda dalam modifikasi motor dan menangkan hadiah menarik!</p>
+                        <span class="event-date">19 September 2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="gallery" class="gallery-section">
+            <h2>Galeri Foto</h2>
+            <div class="gallery-container">
+                <!-- Bagian Atas -->
+                <div class="gallery-top">
+                    <div class="gallery-item">
+                        <img src="image/gallery_1.jpg" alt="Deskripsi Foto 1">
+                        <p>Petualangan di Pegunungan</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/gallery_2.jpg" alt="Deskripsi Foto 2">
+                        <p>Acara Kumpul Komunitas di Pantai</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/gallery_3.jpg" alt="Deskripsi Foto 3">
+                        <p>Sosialisasi dan Diskusi Klub</p>
+                    </div>
+                </div>
+                <!-- Bagian Bawah -->
+                <div class="gallery-bottom">
+                    <div class="gallery-item">
+                        <img src="image/gallery_4.jpg" alt="Deskripsi Foto 4">
+                        <p>Rapat Tahunan Klub</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/gallery_5.jpg" alt="Deskripsi Foto 5">
+                        <p>Jelajah Malam di Kota</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/gallery_6.jpg" alt="Deskripsi Foto 6">
+                        <p>Perayaan Ulang Tahun Klub</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="klien" class="clients-section">
+            <h2>Klien Kami</h2>
+            <p>Kami bangga telah bekerja sama dengan berbagai klien terkemuka dari berbagai belahan dunia. Berikut
+                adalah beberapa di antaranya.</p>
+            <div class="clients-wrapper">
+                <div class="clients-container top">
+                    <div class="client-card">
+                        <img src="image/klien_1.jpg" alt="Klien 1">
+                        <div class="client-info">
+                            <h3>TurboTech Innovations</h3>
+                            <p>Teknologi turbocharger dan solusi performa tinggi untuk kendaraan.</p>
+                        </div>
+                    </div>
+                    <div class="client-card">
+                        <img src="image/klien_2.jpg" alt="Klien 2">
+                        <div class="client-info">
+                            <h3>Ironclad Engineering</h3>
+                            <p>Desain dan pengembangan komponen otomotif berteknologi tinggi.</p>
+                        </div>
+                    </div>
+                    <div class="client-card">
+                        <img src="image/klien_3.jpg" alt="Klien 3">
+                        <div class="client-info">
+                            <h3>Pinnacle Auto Services</h3>
+                            <p>Mencerminkan layanan unggul dalam meningkatkan performa kendaraan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clients-container bottom">
+                    <div class="client-card">
+                        <img src="image/klien_4.jpg" alt="Klien 4">
+                        <div class="client-info">
+                            <h3>Global Motors Inc.</h3>
+                            <p>Perusahaan otomotif global dengan inovasi dan kualitas produk.</p>
+                        </div>
+                    </div>
+                    <div class="client-card">
+                        <img src="image/klien_5.jpg" alt="Klien 5">
+                        <div class="client-info">
+                            <h3>Speedway Enterprises</h3>
+                            <p>Solusi teknologi terdepan untuk meningkatkan performa kendaraan.</p>
+                        </div>
+                    </div>
+                    <div class="client-card">
+                        <img src="image/klien_6.jpg" alt="Klien 6">
+                        <div class="client-info">
+                            <h3>RevTech Solutions</h3>
+                            <p>Konsultasi dan pengembangan produk untuk inovasi otomotif.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Hak Cipta &copy; 2024 Hooligan Bike Club. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+    <script>
+        // Ambil semua link dalam sidebar
+        var navLinks = document.querySelectorAll('#sideNav ul li a');
+
+        // Tambahkan event listener untuk setiap link
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // Hapus kelas 'active' dari semua link
+                navLinks.forEach(function (link) {
+                    link.classList.remove('active');
+                });
+
+                // Tambahkan kelas 'active' ke link yang diklik
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

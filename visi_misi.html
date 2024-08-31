@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi dan Misi - Hooligan Bike Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Tambahkan gaya CSS khusus di sini jika perlu */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="image/logo.png" alt="Hooligan Logo" class="logo">
+            </a>
+        </div>
+        <h1 class="company-name">HOOLIGAN BIKE CLUB</h1>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="visi_misi.html" class="active">Visi dan Misi</a></li>
+                <li><a href="produk.html">Produk Kami</a></li>
+                <li><a href="kontak.html">Kontak Kami</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="side-nav" id="sideNav">
+        <ul>
+            <li><a href="index.html#artikel">Artikel</a></li>
+            <li><a href="index.html#event">Event</a></li>
+            <li><a href="index.html#gallery">Gallery Foto</a></li>
+            <li><a href="index.html#klien">Klien Kami</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section id="visi-misi" class="visi-misi-section">
+            <h2>Visi dan Misi Kami</h2>
+            <div class="visi-misi-container">
+                <div class="visi">
+                    <h3>Visi</h3>
+                    <p>Menjadi komunitas motor terdepan yang memberikan pengalaman berkendara yang tak terlupakan, serta membangun hubungan yang kuat antara anggota melalui kegiatan yang bermanfaat dan menyenangkan.</p>
+                </div>
+                <div class="misi">
+                    <h3>Misi</h3>
+                    <ul>
+                        <li>Organisasi acara dan kegiatan motor yang menarik dan berkualitas.</li>
+                        <li>Mendukung anggota dalam pengembangan keterampilan berkendara dan perawatan motor.</li>
+                        <li>Menjalin kemitraan dengan berbagai pihak untuk memperluas jaringan dan kesempatan bagi anggota.</li>
+                        <li>Menjaga semangat persaudaraan dan kebersamaan dalam komunitas kami.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2024 Hooligan Bike Club. Semua hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Ambil semua link dalam sidebar
+        var navLinks = document.querySelectorAll('#sideNav ul li a');
+    
+        // Tambahkan event listener untuk setiap link
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                // Hapus kelas 'active' dari semua link
+                navLinks.forEach(function(link) {
+                    link.classList.remove('active');
+                });
+    
+                // Tambahkan kelas 'active' ke link yang diklik
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

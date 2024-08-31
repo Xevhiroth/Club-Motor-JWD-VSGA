@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Hooligan Bike Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="image/logo.png" alt="Hooligan Logo" class="logo">
+            </a>
+        </div>
+        <h1 class="company-name">HOOLIGAN BIKE CLUB</h1>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="visi_misi.html">Visi dan Misi</a></li>
+                <li><a href="produk.html">Produk Kami</a></li>
+                <li><a href="kontak.html">Kontak Kami</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="side-nav" id="sideNav">
+        <ul>
+            <li><a href="index.html#artikel">Artikel</a></li>
+            <li><a href="index.html#event">Event</a></li>
+            <li><a href="index.html#gallery">Gallery Foto</a></li>
+            <li><a href="index.html#klien">Klien Kami</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </aside>
+    <main>
+        <section id="profile" class="profile-section">
+            <h2>Profil Kami</h2>
+            <div class="profile-content">
+                <img src="image/logo.png" alt="Profile Picture" class="profile-image">
+                <div class="profile-info">
+                    <h3>Selamat Datang di Hooligan Bike Club!</h3>
+                    <p>Kami adalah komunitas penggemar motor yang berkomitmen untuk memberikan pengalaman berkendara yang tak terlupakan. Sejak berdirinya, 
+                        kami telah menjadi tempat berkumpul bagi para pecinta motor untuk berbagi pengetahuan, pengalaman, dan tentunya keseruan dalam setiap perjalanan.</p>
+                    <p>Kami mengadakan berbagai kegiatan menarik, workshop, dan event yang memperkuat ikatan komunitas serta meningkatkan keterampilan berkendara. Di sini, 
+                        setiap anggota adalah bagian dari keluarga besar yang saling mendukung dan menginspirasi satu sama lain. Kami percaya bahwa semangat kebersamaan dan kecintaan 
+                        terhadap motor adalah kunci untuk menciptakan perjalanan yang penuh makna.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+                <p>&copy; 2024 Hooligan Bike Club. Semua hak cipta dilindungi.</p>
+        </div>
+    </footer>
+    <script>
+        // Ambil semua link dalam sidebar
+        var navLinks = document.querySelectorAll('#sideNav ul li a');
+    
+        // Tambahkan event listener untuk setiap link
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                // Hapus kelas 'active' dari semua link
+                navLinks.forEach(function(link) {
+                    link.classList.remove('active');
+                });
+    
+                // Tambahkan kelas 'active' ke link yang diklik
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,702 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Mengatur tinggi minimum body 100% dari tinggi viewport */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Mengatur body untuk pengaturan absolut elemen dalamnya */
+}
+
+header {
+    width: 100%;
+    background-color: #e7e7e7;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    position: sticky; /* Mengatur header agar tetap menempel di atas saat di-scroll */
+    top: 0; /* Menempel di bagian atas halaman */
+    z-index: 1000; /* Memastikan header berada di atas elemen lain saat di-scroll */
+}
+
+.logo-container {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+}
+
+.company-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    margin-left: 200px;
+    margin-top: 5px;
+}
+
+/* Navbar */
+.top-nav {
+    background-color: #343a40;
+    margin-top: 40px;
+    position: fixed;
+    top: 60px;
+    width: calc(100% - 160px);
+    left: 160px;
+    z-index: 999; /* Pastikan navbar berada di atas elemen lainnya */
+}
+
+
+.top-nav ul {
+    list-style-type: none; /* Menghilangkan bullet points pada list */
+    padding: 0; /* Menghilangkan padding pada list */
+    display: flex; /* Menyusun item navigasi secara horizontal */
+    justify-content: center; /* Menempatkan item navigasi di tengah */
+}
+
+.top-nav ul li {
+    margin: 0 5px; /* Menambahkan spasi horizontal antara item list */
+}
+
+
+.top-nav ul li a {
+    display: block; /* Link navigasi ditampilkan sebagai blok */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: #fff; /* Warna teks link */
+    font-weight: bold; /* Teks link ditebalkan */
+    padding: 10px 15px; /* Jarak dalam pada link */
+}
+
+.top-nav ul li a.active {
+    background-color: #ea9000; /* Warna latar belakang untuk link aktif */
+    color: #000000; /* Warna teks untuk link aktif */
+    border-radius: 4px; /* Sudut membulat pada link aktif */
+}
+
+.top-nav ul li a:hover {
+    background-color: #ea9000; /* Warna latar belakang saat link di-hover */
+}
+
+.side-nav {
+    width: 160px; /* Lebar sidebar */
+    background-color: #343a40; /* Warna latar belakang sidebar */
+    padding: 20px; /* Jarak dalam pada sidebar */
+    height: 100vh; /* Tinggi sidebar sama dengan tinggi viewport */
+    position: fixed; /* Sidebar tetap di tempat saat di-scroll */
+    top: 100px; /* Jarak dari atas layar */
+    left: 0; /* Sidebar berada di sisi paling kiri layar */
+    overflow-y: auto; /* Sidebar bisa di-scroll jika kontennya melebihi tinggi layar */
+    z-index: 1001;
+}
+
+.side-nav ul {
+    list-style-type: none; /* Menghilangkan bullet points pada list */
+    padding: 0; /* Menghilangkan padding pada list */
+}
+
+.side-nav ul li {
+    margin: 20px 0; /* Jarak antar item di sidebar */
+}
+
+.side-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px; /* Menambah padding untuk memperbesar area klik */
+    display: block; /* Membuat link memenuhi area item */
+    border-radius: 4px; /* Menambah sedikit border radius untuk efek melengkung */
+    transition: background-color 0.3s ease; /* Efek transisi untuk hover */
+}
+
+.side-nav ul li a:hover {
+    background-color: #495057; /* Warna latar belakang saat hover */
+}
+
+.side-nav ul li a.active {
+    background-color: #ea9000; /* Warna latar belakang untuk item aktif */
+    color: rgb(0, 0, 0); /* Warna teks saat aktif */
+    border-radius: 4px; /* Menambah sedikit border radius untuk item aktif */
+}
+
+main {
+    flex: 1;
+    margin-left: 200px; /* Sesuaikan dengan lebar sidebar */
+    padding: 30px;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+}
+
+/* Home Section */
+.home-section {
+    margin-top: 0px; /* Jarak dari elemen atas */
+    padding: 20px; /* Padding di dalam section */
+    background-color: #f9f9f9; /* Warna latar belakang */
+    border-radius: 4px; /* Sudut membulat */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+.home-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Jarak bawah dari judul */
+    color: #343a40; /* Warna teks judul */
+    text-align: center; /* Teks judul diatur ke tengah */
+}
+
+.home-section p {
+    font-size: 18px; /* Ukuran font untuk paragraf */
+    color: #555; /* Warna teks paragraf */
+    max-width: 800px; /* Lebar maksimum paragraf */
+    margin: 0 auto; /* Margin auto agar berada di tengah */
+    line-height: 2.0; /* Jarak antar baris */
+    text-align: center; /* Teks paragraf diatur ke tengah */
+}
+
+.home-image {
+    width: 55%; /* Gambar menyesuaikan dengan lebar container */
+    height: auto; /* Mempertahankan rasio aspek gambar */
+    display: block; /* Gambar ditampilkan sebagai blok */
+    margin: 20px auto; /* Mengatur margin agar gambar berada di tengah */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk estetika */
+}
+
+/* Artikel Section */
+.artikel-section {
+    padding: 40px 20px; /* Jarak dalam pada section artikel */
+    background-color: #f9f9f9; /* Warna latar belakang section artikel */
+    text-align: center; /* Teks diatur ke tengah */
+    padding-top: 150px;
+}
+
+.artikel-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px; /* Ukuran font untuk judul */
+    margin-bottom: 30px; /* Jarak bawah dari judul */
+    padding-top: 50px;
+    color: #343a40; /* Warna teks judul */
+}
+
+.artikel-container {
+    display: flex; /* Menyusun artikel secara horizontal */
+    justify-content: center; /* Menempatkan artikel di tengah */
+    gap: 20px; /* Jarak antar artikel */
+    flex-wrap: wrap; /* Artikel akan membungkus jika layar tidak cukup lebar */
+}
+
+.artikel-card {
+    background-color: #f9f9f9; /* Warna latar belakang kartu artikel */
+    border-radius: 8px; /* Sudut membulat pada kartu artikel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus pada kartu artikel */
+    overflow: hidden; /* Konten yang meluap akan disembunyikan */
+    max-width: 350px; /* Lebar maksimum kartu artikel */
+    text-align: left; /* Teks diatur ke kiri */
+    transition: transform 0.3s ease-in-out; /* Transisi saat kartu di-hover */
+}
+
+.artikel-card img {
+    width: 100%; /* Gambar menyesuaikan dengan lebar kartu artikel */
+    height: 180px; /* Tinggi gambar pada kartu artikel */
+    object-fit: cover; /* Gambar menyesuaikan dengan container tanpa mengubah rasio */
+}
+
+.artikel-info {
+    padding: 15px; /* Jarak dalam pada bagian informasi artikel */
+}
+
+.artikel-info h3 {
+    font-size: 24px; /* Ukuran font untuk judul artikel */
+    margin-bottom: 10px; /* Jarak bawah dari judul artikel */
+    color: #343a40; /* Warna teks judul artikel */
+}
+
+.artikel-info p {
+    font-size: 16px; /* Ukuran font untuk paragraf artikel */
+    color: #555; /* Warna teks paragraf artikel */
+    margin-bottom: 10px; /* Jarak bawah dari paragraf artikel */
+}
+
+.read-more {
+    font-size: 14px; /* Ukuran font untuk link baca selengkapnya */
+    color: #007bff; /* Warna teks untuk link */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-weight: bold; /* Teks link ditebalkan */
+}
+
+.read-more:hover {
+    text-decoration: underline; /* Garis bawah muncul saat link di-hover */
+}
+
+.artikel-card:hover {
+    transform: translateY(-10px); /* Kartu artikel bergerak naik saat di-hover */
+}
+
+/* Event Section */
+.event-section {
+    padding: 40px 20px; /* Jarak dalam pada section event */
+    background-color: #f9f9f9; /* Warna latar belakang section event */
+    text-align: center; /* Teks diatur ke tengah */
+    padding-top: 200px;
+}
+
+.event-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px; /* Ukuran font untuk judul */
+    margin-bottom: 30px; /* Jarak bawah dari judul */
+    color: #343a40; /* Warna teks judul */
+}
+
+.event-container {
+    display: flex; /* Menyusun event secara horizontal */
+    justify-content: center; /* Menempatkan event di tengah */
+    gap: 20px; /* Jarak antar event */
+    flex-wrap: wrap; /* Event akan membungkus jika layar tidak cukup lebar */
+}
+
+.event-card {
+    background-color: white; /* Warna latar belakang kartu event */
+    border-radius: 8px; /* Sudut membulat pada kartu event */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus pada kartu event */
+    overflow: hidden; /* Konten yang meluap akan disembunyikan */
+    max-width: 350px; /* Lebar maksimum kartu event */
+    text-align: left; /* Teks diatur ke kiri */
+    transition: transform 0.3s ease-in-out; /* Transisi saat kartu di-hover */
+}
+
+.event-card img {
+    width: 100%; /* Gambar menyesuaikan dengan lebar kartu event */
+    height: 180px; /* Tinggi gambar pada kartu event */
+    object-fit: cover; /* Gambar menyesuaikan dengan container tanpa mengubah rasio */
+}
+
+.event-info {
+    padding: 15px; /* Jarak dalam pada bagian informasi event */
+}
+
+.event-info h3 {
+    font-size: 24px; /* Ukuran font untuk judul event */
+    margin-bottom: 10px; /* Jarak bawah dari judul event */
+    color: #343a40; /* Warna teks judul event */
+}
+
+.event-info p {
+    font-size: 16px; /* Ukuran font untuk paragraf event */
+    color: #555; /* Warna teks paragraf event */
+    margin-bottom: 10px; /* Jarak bawah dari paragraf event */
+}
+
+.event-date {
+    font-size: 14px; /* Ukuran font untuk tanggal event */
+    color: #888; /* Warna teks tanggal event */
+    font-style: italic; /* Teks tanggal event dimiringkan */
+}
+
+.event-card:hover {
+    transform: translateY(-10px); /* Kartu event bergerak naik saat di-hover */
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 40px 20px;
+    background-color: #f5f5f5; /* Warna latar belakang section */
+    text-align: center; /* Teks diatur ke tengah */
+    padding-top: 200px;
+}
+
+.gallery-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px; /* Ukuran font untuk judul */
+    margin-bottom: 30px; /* Jarak bawah dari judul */
+    color: #343a40; /* Warna teks judul */
+}
+
+.gallery-container {
+    max-width: 1200px; /* Lebar maksimum kontainer galeri */
+    margin: 0 auto; /* Margin auto agar berada di tengah */
+}
+
+.gallery-top, .gallery-bottom {
+    display: flex; /* Menggunakan flexbox untuk penataan item */
+    justify-content: center; /* Menempatkan item di tengah */
+    gap: 20px; /* Jarak antar item */
+    margin-bottom: 30px; /* Jarak bawah antara bagian atas dan bawah */
+}
+
+.gallery-item {
+    background-color: #fff; /* Warna latar belakang item */
+    border-radius: 8px; /* Sudut membulat pada item */
+    overflow: hidden; /* Menghilangkan overflow gambar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus pada item */
+    max-width: 320px; /* Lebar maksimum item (diperbesar sedikit) */
+    text-align: center; /* Teks di dalam item diatur ke tengah */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi untuk hover */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Memperbesar item saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Menambah bayangan saat hover */
+}
+
+.gallery-item img {
+    width: 100%; /* Gambar menyesuaikan dengan lebar item */
+    height: 200px; /* Tinggi gambar ditetapkan agar lebih besar */
+    object-fit: cover; /* Mempertahankan rasio aspek dan menutupi area item */
+    display: block; /* Gambar ditampilkan sebagai blok */
+}
+
+.gallery-item p {
+    padding: 15px; /* Jarak dalam pada deskripsi foto */
+    font-size: 16px; /* Ukuran font untuk deskripsi foto */
+    color: #333; /* Warna teks deskripsi foto */
+}
+
+/* Klien Section */
+#klien {
+    padding: 40px 20px; /* Jarak dalam pada section klien */
+    background-color: #f9f9f9; /* Warna latar belakang section */
+    text-align: center; /* Teks diatur ke tengah */
+    padding-top: 200px; /* Menyesuaikan padding bawah */
+}
+
+#klien h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Jarak bawah dari judul */
+    color: #343a40; /* Warna teks judul */
+}
+
+#klien p {
+    font-size: 18px; /* Ukuran font untuk deskripsi */
+    color: #555; /* Warna teks deskripsi */
+    max-width: 800px; /* Lebar maksimum deskripsi */
+    margin: 0 auto; /* Margin auto agar berada di tengah */
+    line-height: 1.8; /* Jarak antar baris */
+}
+
+.clients-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Jarak antar bagian atas dan bawah */
+}
+
+.clients-container {
+    display: flex; /* Menyusun card klien secara horizontal */
+    justify-content: center; /* Menempatkan card klien di tengah */
+    gap: 20px; /* Jarak antar card klien */
+    flex-wrap: wrap; /* Card klien membungkus jika layar tidak cukup lebar */
+    max-width: 1000px; /* Lebar maksimum container */
+    margin: 0 auto; /* Margin auto agar berada di tengah */
+}
+
+.clients-container.top, .clients-container.bottom {
+    gap: 20px; /* Jarak antar card klien dalam container */
+}
+
+.client-card {
+    background-color: #fff; /* Warna latar belakang card klien */
+    border-radius: 8px; /* Sudut membulat pada card klien */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus pada card klien */
+    overflow: hidden; /* Konten yang meluap akan disembunyikan */
+    max-width: 300px; /* Lebar maksimum card klien */
+    text-align: center; /* Teks diatur ke tengah */
+    transition: transform 0.3s ease-in-out; /* Transisi saat card di-hover */
+}
+
+.client-card img {
+    width: 100%; /* Gambar menyesuaikan dengan lebar card klien */
+    height: 150px; /* Tinggi gambar */
+    object-fit: cover; /* Gambar menyesuaikan dengan container tanpa mengubah rasio */
+    background-color: #e9ecef; /* Warna latar belakang gambar jika tidak ada gambar */
+}
+
+.client-info {
+    padding: 15px; /* Jarak dalam pada bagian informasi klien */
+}
+
+.client-info h3 {
+    font-size: 20px; /* Ukuran font untuk nama klien */
+    margin-bottom: 10px; /* Jarak bawah dari nama klien */
+    color: #343a40; /* Warna teks nama klien */
+}
+
+.client-info p {
+    font-size: 14px; /* Ukuran font untuk deskripsi klien */
+    color: #555; /* Warna teks deskripsi */
+}
+
+.client-card:hover {
+    transform: scale(1.05); /* Meningkatkan ukuran card klien saat di-hover */
+}
+
+
+/* Profile Section */
+.profile-section {
+    padding: 40px 20px; /* Jarak dalam pada section profil */
+    background-color: #ffffff; /* Warna latar belakang section */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    text-align: center; /* Teks diatur ke tengah */
+}
+
+.profile-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Jarak bawah dari judul */
+    color: #343a40; /* Warna teks judul */
+}
+
+.profile-content {
+    display: flex;
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    flex-wrap: wrap; /* Mengatur item untuk membungkus jika terlalu panjang */
+    gap: 20px; /* Jarak antar item */
+    max-width: 1200px; /* Lebar maksimum konten */
+    margin: 0 auto; /* Margin auto agar berada di tengah */
+}
+
+.profile-image {
+    border-radius: 0; /* Membuat gambar profil menjadi bulat */
+    width: 300px; /* Lebar gambar */
+    height: 300px; /* Tinggi gambar */
+    object-fit: cover; /* Menjaga rasio gambar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan halus pada gambar */
+}
+
+.profile-info {
+    max-width: 800px; /* Lebar maksimum info profil */
+    text-align: left; /* Teks diatur ke kiri */
+}
+
+.profile-info h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px; /* Ukuran font untuk sub-judul */
+    margin-bottom: 15px; /* Jarak bawah dari sub-judul */
+    color: #343a40; /* Warna teks sub-judul */
+}
+
+.profile-info p {
+    font-size: 18px; /* Ukuran font untuk paragraf */
+    color: #555; /* Warna teks paragraf */
+    line-height: 1.8; /* Jarak antar baris */
+    margin-bottom: 15px; /* Jarak bawah antar paragraf */
+    text-align: justify;
+}
+
+/* Visi dan Misi Section */
+.visi-misi-section {
+    padding: 40px 20px; /* Jarak dalam pada section visi misi */
+    background-color: #ffffff; /* Warna latar belakang section */
+    text-align: center; /* Teks diatur ke tengah */
+}
+
+.visi-misi-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px; /* Ukuran font untuk judul */
+    margin-bottom: 30px; /* Jarak bawah dari judul */
+    color: #343a40; /* Warna teks judul */
+}
+
+.visi-misi-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.visi, .misi {
+    background-color: #ffffff; /* Warna latar belakang section */
+    ; /* Warna latar belakang bagian visi dan misi */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus pada bagian visi dan misi */
+}
+
+.visi h3, .misi h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px; /* Ukuran font untuk sub-judul */
+    color: #343a40; /* Warna teks sub-judul */
+    margin-bottom: 20px; /* Jarak bawah dari sub-judul */
+}
+
+.visi p {
+    font-size: 18px; /* Ukuran font untuk paragraf visi */
+    color: #555; /* Warna teks paragraf */
+    line-height: 1.8; /* Jarak antar baris */
+    text-align: justify;
+}
+
+.misi ul {
+    list-style-type: disc; /* Tipe list untuk item */
+    padding-left: 20px; /* Padding kiri untuk list */
+    color: #555; /* Warna teks item list */
+    font-size: 16px; /* Ukuran font untuk item list */
+    line-height: 1.8; /* Jarak antar baris */
+    text-align: justify;
+}
+
+/* Produk Section */
+.produk-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.produk-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+.produk-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.produk-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 400px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.produk-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.produk-info {
+    padding: 15px;
+}
+
+.produk-info h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.produk-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.produk-price {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.produk-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Kontak Section */
+.kontak-section {
+    padding: 40px 20px; /* Jarak dalam pada section kontak */
+    background-color: #ffffff; /* Warna latar belakang section */
+    text-align: center; /* Teks diatur ke tengah */
+}
+
+.kontak-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Jarak bawah dari judul */
+    color: #343a40; /* Warna teks judul */
+}
+
+.kontak-section p {
+    font-size: 18px; /* Ukuran font untuk deskripsi */
+    color: #555; /* Warna teks deskripsi */
+    max-width: 800px; /* Lebar maksimum deskripsi */
+    margin: 0 auto; /* Margin auto agar berada di tengah */
+    line-height: 1.8; /* Jarak antar baris */
+}
+
+.kontak-info {
+    text-align: left; /* Teks diatur ke kiri */
+    max-width: 500px; /* Lebar maksimum untuk bagian kontak */
+    margin: 20px auto; /* Margin auto agar berada di tengah */
+}
+
+.kontak-info p {
+    font-size: 18px; /* Ukuran font untuk teks kontak */
+    color: #333; /* Warna teks kontak */
+    margin-bottom: 10px; /* Jarak bawah dari tiap baris kontak */
+}
+
+.kontak-info strong {
+    color: #007bff; /* Warna teks tebal */
+}
+
+/* About Section */
+.about-section {
+    padding: 40px 20px; /* Jarak dalam pada section profil */
+    background-color: #ffffff; /* Warna latar belakang section */
+    text-align: center; /* Teks diatur ke tengah */
+}
+
+.about-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Jarak bawah dari judul */
+    color: #343a40; /* Warna teks judul */
+}
+
+.about-content {
+    display: flex;
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    flex-wrap: wrap; /* Mengatur item untuk membungkus jika terlalu panjang */
+    gap: 20px; /* Jarak antar item */
+    max-width: 1200px; /* Lebar maksimum konten */
+    margin: 0 auto; /* Margin auto agar berada di tengah */
+}
+
+.about-logo {
+    width: 200px; /* Lebar gambar */
+    height: 300px; /* Tinggi gambar */
+    object-fit: cover; /* Menjaga rasio gambar */
+}
+
+.about-info {
+    max-width: 800px; /* Lebar maksimum info profil */
+    text-align: left; /* Teks diatur ke kiri */
+}
+
+.about-info p {
+    font-size: 18px; /* Ukuran font untuk paragraf */
+    color: #555; /* Warna teks paragraf */
+    line-height: 1.8; /* Jarak antar baris */
+    margin-bottom: 15px; /* Jarak bawah antar paragraf */
+    text-align: justify;
+}
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    margin-left: 200px;
+}
